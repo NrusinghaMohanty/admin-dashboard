@@ -1,3 +1,71 @@
-.addbtn{
-    
+@import "../../styles/variables.scss";
+
+.addbtn {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #c4c2c73d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .model {
+        padding: 50px;
+        border-radius: 10px;
+        background-color: $main-bg;
+        position: relative;
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: 24px;
+            color: $soft-color;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            background-color: white;
+            color: $main-bg;
+            padding: 3px 7px;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 500px;
+            justify-content: space-between;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+
+                label {
+                    font-size: 14px;
+                }
+
+                input {
+                    padding: 10px;
+                    background-color: transparent;
+                    color: white;
+                    outline: none;
+                    border: 1px solid $soft-color;
+                    border-radius: 3px;
+                }
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+    }
 }

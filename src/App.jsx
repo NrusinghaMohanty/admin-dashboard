@@ -5,7 +5,9 @@ import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/home'
 import Login from './pages/login/Login';
 import Products from './pages/products/Products';
-import Users from './pages/users/Users'
+import Product from './pages/product/Product';
+import Users from './pages/users/Users';
+import User from './pages/user/User';
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 
 function App() {
@@ -41,8 +43,16 @@ function App() {
           element: <Users />,
         },
         {
+          path: "/users/:id",
+          element: <User />,
+        },
+        {
           path: "/products",
           element: <Products />,
+        },
+        {
+          path: "/products/:id",
+          element: <Product />,
         },
       ]
     },

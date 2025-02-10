@@ -60,10 +60,10 @@ const Users = () => {
     <div className="users">
         <div className="info">
             <h1>Users</h1>
-            <button>Add New User</button>
+            <button onClick={() => setOpen(true)}>Add New User</button>
         </div>
-        <DataTable userID='users' columns={columns} rows={userRows} />
-        {open && <AddBtn user='user' coloumns={columns} setOpen={setOpen} />}
+        <DataTable value='users' columns={columns} rows={userRows} />
+        {open && <AddBtn value='user' columns={columns} setOpen={setOpen} />}
     </div>
     )
 };
